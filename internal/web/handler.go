@@ -52,7 +52,7 @@ func (h *BookHandlers) GetBooksByID(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	book, err := h.service.GetBooksByID(id)
+	book, err := h.service.GetBookByID(id)
 	if err != nil {
 		http.Error(w, "Failed to get book", http.StatusInternalServerError)
 		return
